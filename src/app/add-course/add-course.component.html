@@ -1,0 +1,58 @@
+<h3>Add Course</h3>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label for="name">Course Name</label>
+            <input type="text" class="form-control" [(ngModel)]="courseName">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+            <div class="form-group">
+                <label for="name">Course Instructor Name</label>
+                <input type="text" class="form-control" [(ngModel)]="courseInstructorName">
+            </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+            <div class="form-group">
+                <label for="name">Course Duration</label>
+                <input type="number" step="any" class="form-control" [(ngModel)]="courseDuration">
+            </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+            <div class="form-group">
+                <label for="name">Course Rating</label>
+                <input type="number" step="any" class="form-control" [(ngModel)]="courseRating">
+            </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+            <div class="form-group">
+                <label for="name">Course price (Rs.)</label>
+                <input type="number" step="any"  class="form-control" [(ngModel)]="coursePrice">
+            </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" [(ngModel)]="category" >
+                    <option *ngFor="let category of categories" value="{{category.id}}">{{category.name}}</option>
+                </select>
+            </div>
+    </div>
+</div>
+<br>
+<button (click)="save()" class="btn btn-success">SAVE</button>
